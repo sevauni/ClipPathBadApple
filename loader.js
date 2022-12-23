@@ -1,7 +1,7 @@
 "use strict";
-
+//info at the bottom
 class ClipPathVideo {
-    constructor(pathElement, partsAmount, frameRate) {
+    constructor(pathElement, partsAmount, frameTiming) {
         this.loadingPart = 1;
         this.framesArray = [];
         this.status = "stop";
@@ -13,7 +13,7 @@ class ClipPathVideo {
 
         this.pathElement = pathElement;
         this.partsAmount = partsAmount;
-        this.millisFrames = frameRate;
+        this.millisFrames = frameTiming;
 
 
     }
@@ -76,19 +76,25 @@ class ClipPathVideo {
 }
 
 
-let badApple = new ClipPathVideo(document.querySelector("#my-clip-path").querySelector("path"), 65, 65);
-//let audio = new Audio('./audio/music.mp3');
-//document.body.addEventListener('click', startPlay, true); 
 
+
+
+
+//Clip Path player
+//usage:
+// create obj with new command:  let badApple = new ClipPathVideo (pathElement, partsAmount, frameTiming)
+//"path element" - element with path property inside
+//"partsAmount" - path lines are divided into several files so browser won't load a 65Mb text file. This is how many of this files there are.
+//"frameTiming " - milliseconds for the next frame to appear
+
+//methods
+// .play() .pause() .stop()
+
+
+
+let badApple = new ClipPathVideo(document.querySelector("#my-clip-path").querySelector("path"), 65, 65);
 badApple.play();
 
-
-// function startPlay() {
-//     badApple.play();
-//     document.querySelector("#playbutton").classList.add('hide');
-//     document.querySelector("#playbutton").classList.remove('show');
-//     audio.play();
-// }
 
 
 
