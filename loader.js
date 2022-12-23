@@ -84,7 +84,7 @@ class ClipPathVideo {
 //usage:
 // create obj with new command:  let badApple = new ClipPathVideo (pathElement, partsAmount, frameTiming)
 //"path element" - element with path property inside
-//"partsAmount" - path lines are divided into several files so browser won't load a 65Mb text file. This is how many of this files there are.
+//"partsAmount" - path lines are divided into several files so the browser won't load a 65Mb text file. This is how many of these files there are.
 //"frameTiming " - milliseconds for the next frame to appear
 
 //methods
