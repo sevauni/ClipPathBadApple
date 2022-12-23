@@ -1,0 +1,20 @@
+.svg {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+.clipped {
+  width: 600px;
+  height: 600px;
+  /* background: rgb(100, 0, 231) url(https://source.unsplash.com/600x600?summer); */
+  background: blue;
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+  transform: rotate(180deg);
+}
+
+ .back{
+  width: 400px;
+ 
+}
